@@ -16,7 +16,7 @@ class MainScreen extends StatelessWidget {
       appBar: Responsive.isDesktop(context)
           ? null
           : AppBar(
-              backgroundColor: bgColor,
+              backgroundColor: Colors.black,
               leading: Builder(
                 builder: (context) => IconButton(
                   onPressed: () {

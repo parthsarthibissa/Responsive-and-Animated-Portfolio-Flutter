@@ -27,19 +27,18 @@ class SideMenu extends StatelessWidget {
                   children: [
                     AreaInfoText(
                       title: "Residence",
-                      text: "Bangladesg",
+                      text: "India",
                     ),
                     AreaInfoText(
                       title: "City",
-                      text: "Dhaka",
+                      text: "Jodhpur, Rajasthan",
                     ),
                     AreaInfoText(
                       title: "Age",
-                      text: "22",
+                      text: "21",
                     ),
                     Skills(),
                     SizedBox(height: defaultPadding),
-                    Coding(),
                     Knowledges(),
                     Divider(),
                     SizedBox(height: defaultPadding / 2),
@@ -49,7 +48,7 @@ class SideMenu extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              "DOWNLOAD CV",
+                              "DOWNLOAD Resume",
                               style: TextStyle(
                                 color: Theme.of(context)
                                     .textTheme
@@ -64,21 +63,29 @@ class SideMenu extends StatelessWidget {
                       ),
                     ),
                     Container(
+                      height: 65,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10)),
                       margin: EdgeInsets.only(top: defaultPadding),
-                      color: Color(0xFF24242E),
                       child: Row(
                         children: [
                           Spacer(),
                           IconButton(
                             onPressed: () {},
+                            color: Colors.white,
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
+                          Spacer(),
                           IconButton(
                             onPressed: () {},
+                            color: Colors.white,
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
+                          Spacer(),
                           IconButton(
                             onPressed: () {},
+                            color: Colors.white,
                             icon: SvgPicture.asset("assets/icons/twitter.svg"),
                           ),
                           Spacer(),

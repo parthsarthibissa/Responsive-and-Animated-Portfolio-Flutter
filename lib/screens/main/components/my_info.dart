@@ -10,26 +10,33 @@ class MyInfo extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: Color(0xFF242430),
+        color: Colors.black,
         child: Column(
           children: [
             Spacer(flex: 2),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage("assets/images/IMG_7344.jpg"),
+            Container(
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/parth.jpg'))),
             ),
             Spacer(),
             Text(
-              "Abu Anwar",
-              style: Theme.of(context).textTheme.subtitle2,
+              "Parth Sarthi Bissa",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600),
             ),
             Text(
-              "Flutter Developer & Founder of \n The Flutter Way",
+              "Flutter Developer",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontWeight: FontWeight.w200,
-                height: 1.5,
-              ),
+                  fontWeight: FontWeight.w200,
+                  height: 1.5,
+                  color: Colors.white),
             ),
             Spacer(flex: 2),
           ],

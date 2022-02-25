@@ -15,6 +15,9 @@ class MyProjects extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SizedBox(
+          height: defaultPadding * 2,
+        ),
         Text(
           "My Projects",
           style: Theme.of(context).textTheme.headline6,
@@ -52,7 +55,6 @@ class ProjectsGridView extends StatelessWidget {
       itemCount: demo_projects.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
-        childAspectRatio: childAspectRatio,
         crossAxisSpacing: defaultPadding,
         mainAxisSpacing: defaultPadding,
       ),

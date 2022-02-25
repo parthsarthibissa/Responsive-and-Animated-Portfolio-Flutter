@@ -16,21 +16,28 @@ class RecommendationCard extends StatelessWidget {
     return Container(
       width: 400,
       padding: EdgeInsets.all(defaultPadding),
-      color: secondaryColor,
+      color: Colors.black,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             recommendation.name!,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
-          Text(recommendation.source!),
+          Text(
+            recommendation.source!,
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           const SizedBox(height: defaultPadding),
           Text(
             recommendation.text!,
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(height: 1.5),
+            style: TextStyle(color: Colors.white, height: 1.5),
           )
         ],
       ),

@@ -16,11 +16,7 @@ class HomeBanner extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(
-            "assets/images/bg.jpeg",
-            fit: BoxFit.cover,
-          ),
-          Container(color: darkColor.withOpacity(0.66)),
+          Container(color: Colors.black),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
             child: Column(
@@ -50,11 +46,11 @@ class HomeBanner extends StatelessWidget {
                       padding: EdgeInsets.symmetric(
                           horizontal: defaultPadding * 2,
                           vertical: defaultPadding),
-                      backgroundColor: primaryColor,
+                      backgroundColor: Colors.black,
                     ),
                     child: Text(
                       "EXPLORE NOW",
-                      style: TextStyle(color: darkColor),
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
               ],
@@ -82,10 +78,13 @@ class MyBuildAnimatedText extends StatelessWidget {
           if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
-          Text("I build "),
-          Responsive.isMobile(context)
-              ? Expanded(child: AnimatedText())
-              : AnimatedText(),
+          Text(
+            "I build cross platform applications ",
+            style: TextStyle(color: Colors.white),
+          ),
+          // Responsive.isMobile(context)
+          //     ? Expanded(child: AnimatedText())
+          //     : AnimatedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: defaultPadding / 2),
           if (!Responsive.isMobileLarge(context)) FlutterCodedText(),
@@ -131,12 +130,13 @@ class FlutterCodedText extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: "<",
+        style: TextStyle(color: Colors.white),
         children: [
           TextSpan(
             text: "flutter",
-            style: TextStyle(color: primaryColor),
+            style: TextStyle(color: Colors.grey),
           ),
-          TextSpan(text: ">"),
+          TextSpan(text: ">", style: TextStyle(color: Colors.white)),
         ],
       ),
     );
